@@ -1,0 +1,50 @@
+.album {
+    display:flex;
+    border-bottom:1px solid #ccc;
+    margin:0px auto;
+    padding:20px;
+    max-width:800px;
+    justify-content: space-between;
+  }
+  
+  .album:hover{
+    background-color: #eee;
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 5px 5px 15px #ccc;
+  }
+  
+  .album__main {
+    display:flex;
+  }
+  
+  .album__main img {
+    margin-right:20px;
+  }
+  
+  .album__info {
+    text-align: left;
+  }
+  
+  .album__name{
+    font-weight: 600;
+  }
+  
+  .album__artist,.album__released {
+    font-weight: 400;
+    font-size:0.9rem;
+  }
+  
+  
+  .album__songs {
+    margin:auto 0;
+    color:rgba(0,0,0,.6);
+    font-weight: 400;;
+    font-size:0.8rem;
+  }
+
+  @media only screen and (max-width: 600px)  {
+      .album{
+          flex-direction: column;
+      }
+  }

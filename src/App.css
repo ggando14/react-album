@@ -1,38 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.favorite {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height:90vh;
+  max-width:900px;
+  margin:0 auto;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.favorite__left {
+  display: block;
+  min-width:210px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.favorite__left .fixed__layer {
+  text-align: center;
+  position:fixed;
+}
+
+.favorite__left img {
+  margin-top:50px;
+  width:200px;
+  height:200px;
+  border-radius:50%;
+}
+
+.favorite__left h2 {
+  font-family: Montserrat;
+}
+
+.favorite__right {
+  text-align:center;
+  padding-top:10px;
+}
+
+
+
+@media only screen and (max-width: 600px)  {
+  .favorite{
+      flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  .favorite__left {
+    width:100%;
+  }
+  .favorite__left .fixed__layer {
+    position:relative;
   }
 }
