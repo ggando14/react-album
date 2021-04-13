@@ -4,6 +4,28 @@
   text-align: center;
 }
 
+header{
+  background-color: #000;
+  font-family:'Montserrat';
+  color:#fff;
+  height: 40px;
+  position:fixed;
+  width:100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  z-index:2;
+}
+
+
+header img {
+  width:20px;
+  height:20px;
+  margin-right:10px;
+}
+
+
+
 .favorite {
   display: flex;
   height:90vh;
@@ -14,6 +36,7 @@
 
 .favorite__left {
   display: block;
+  margin-top:20px;
   min-width:210px;
 }
 
@@ -35,7 +58,7 @@
 
 .favorite__right {
   text-align:center;
-  padding-top:10px;
+  padding-top:20px;
 }
 
 

@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import AlbumList from './component/list/albumList';
 import Artist from './component/artist/artist';
-import loadingSvg from './loading.svg';
+import loadingSvg from './assets/svg/loading.svg';
+import headerSvg from './assets/svg/header.svg';
 import './App.css';
 
 axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
@@ -40,17 +41,17 @@ const App= () => {
 
   return (
     <div className="App">
-
-      <div className="favorite">
-        <div className="favorite__left">
+      <header> <img src={headerSvg} alt="Favorite Album" /> Favorite Album </header>
+      <main className="favorite">
+        <aside className="favorite__left">
           <div className="fixed__layer">
           {loading?  <Artist album={albums[0]}/> : '' } 
           </div>
-        </div>
-        <div className="favorite__right">
+        </aside>
+        <section className="favorite__right">
           {loading? (<AlbumList albums={albums} />): ( <img src={loadingSvg} alt="loading" /> ) }
-        </div>
-      </div>
+        </section>
+      </main>
       
     </div>
   );
